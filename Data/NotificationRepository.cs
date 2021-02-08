@@ -15,7 +15,7 @@ namespace DapperUowTests.Data
 
         public IEnumerable<NotificationModel> Get()
         {
-            return _session.Connection.Query<NotificationModel>("SELECT * FROM [Notifications]"null, _session.Transaction);
+            return _session.Connection.Query<NotificationModel>("SELECT * FROM [Notifications]", null, _session.Transaction);
         }
 
         public void Save(NotificationModel model)
